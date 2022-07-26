@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "b3cf6e26-5dbd-4f94-ad48-632c6e66b929",
+		"name": "EV-BC24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14615407"
+	},
+	"item": [
+		{
+			"name": "Transaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : \"100.00\",\r\n\r\n    \"documentType\" : \"CE\",\r\n\r\n    \"documentNumber\": \"47449217\",\r\n\r\n    \"transactionType\" : \"CCI\",\r\n\r\n    \"comission\" : \"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8004/api/transaction/62cfa363e2bce1382b12cfbd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"api",
+						"transaction",
+						"62cfa363e2bce1382b12cfbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ms_YankiWallet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentType\": \"DNI\",\r\n    \"documentNumber\": \"71819276\",\r\n    \"phoneNumber\": \"123456789\",\r\n    \"imei\": \"321\",\r\n    \"email\": \"geral@gmail.com\",\r\n    \"debitCard\": \"987654321\",\r\n    \"associatedAccount\": \"5678901234\",\r\n    \"balance\" : 0.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/yanki/62df6ecd4a34ac503f331f0b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"yanki",
+						"62df6ecd4a34ac503f331f0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ms_WalletOwner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"names\": \"Valentina\",\r\n    \"surName\": \"Santos\",\r\n    \"secondSurName\": \"Toribio\",\r\n    \"documentNumber\": \"123456789101\",\r\n    \"documentType\": \"DNI\",\r\n    \"phoneNumber\": \"96677786\",\r\n    \"email\": \"vale@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8007/owner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8007",
+					"path": [
+						"owner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonalClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Erikson\",\r\n    \"lastName\": \"Napan\",\r\n    \"documentType\": \"DNI\",\r\n    \"documentNumber\": \"47449216\",\r\n    \"email\": \"erik@gmail.com\",\r\n    \"address\": \"Lince\",\r\n    \"phone\": \"956777827\",\r\n    \"vip\": true   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/client/personal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"client",
+						"personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnterpriseClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"NttData\",\r\n    \"documentType\": \"2\",\r\n    \"ruc\": \"123456789\",\r\n    \"email\": \"emeal@nttData.com.pe\",\r\n    \"address\": \"Napan\",\r\n    \"phone\": \"956777827\",\r\n    \"pyme\": true   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientActiveProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/client/personal/clientActives/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"client",
+						"personal",
+						"clientActives",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActiveProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCardNumber\" : \"3456765432123456\",\r\n    \"status\": \"1\",\r\n    \"expirationDate\" : \"2023-09-30\",\r\n    \"idClient\" : \"62d7919ccdba557553642f95\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8002/api/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PassiveProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeAccount\" : \"Cuenta Corriente\",\r\n    \"accountNumber\" : \"1234567890123\",\r\n    \"status\": \"5\",\r\n    \"amount\": 0,\r\n    \"idClient\" : \"62cf372367c779398d85c0dd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/api/passive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"api",
+						"passive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnterpriseActiveProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/client/enterprise/enterpriseActives/62cf372367c779398d8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"client",
+						"enterprise",
+						"enterpriseActives",
+						"62cf372367c779398d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnterprisePassiveProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/client/enterprise/enterprisePassives/09",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"client",
+						"enterprise",
+						"enterprisePassives",
+						"09"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
